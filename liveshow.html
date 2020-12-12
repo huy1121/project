@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Show</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">''
+
+    <style>
+        .container1 {
+            position: relative;
+            width: 100%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.897);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .container1:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+
+        .content {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        #ontop {
+            padding-left: 8%;
+
+        }
+
+        #ontop>a {
+            margin-left: 8%;
+        }
+
+        a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        .imhere {
+            color: burlywood;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="home.html" class="w3-bar-item w3-button"><b>Music World</b> <span style="font-size: 0.6em;">Bring
+                    music to life.</span></a>
+            <!-- Float links to the right. Hide them on small screens -->
+
+            <div class="w3-right w3-hide-medium w3-hide-large" style="padding-right: 6em;">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black"><i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <span id="auth-small">
+                            <a href="login.html" class="w3-bar-item w3-button">Login</a>
+                            <a href="login.html" class="w3-bar-item w3-button">My account</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-right w3-hide-small">
+                <span id="auth">
+                    <a href="login.html" class="w3-bar-item w3-button">Login</a>
+                    <a href="login.html" class="w3-bar-item w3-button">My account</a>
+                </span>
+            </div>
+        </div>
+        <div class="w3-bar w3-black w3-hide-small " id="ontop">
+            <a class="w3-bar-item w3-btn w3-mobile" href="home.html">Home</a>
+            <a class="w3-bar-item w3-btn w3-mobile " href="shop.html">Music</a>
+            <a class="w3-bar-item w3-btn w3-mobile " href="singer.html">Singer</a>
+            <a class="w3-bar-item w3-btn w3-mobile imhere" href="liveshow.html">Liveshow</a>
+            <a class="w3-bar-item w3-btn w3-mobile" href="#contact">Contact us</a>
+            <a class="w3-bar-item w3-btn w3-mobile" href="aboutus.html">About us</a>
+        </div>
+
+    </div>
+    <!-- Body -->
+    <div class="w3-bar w3-black w3-hide-medium w3-hide-large" style="margin-top: 4.7em;"> <a
+            class="w3-bar-item w3-btn w3-mobile" href="home.html">Home</a>
+        <a class="w3-bar-item w3-btn w3-mobile " href="shop.html">Music</a>
+        <a class="w3-bar-item w3-btn w3-mobile " href="singer.html">Singer</a>
+        <a class="w3-bar-item w3-btn w3-mobile imhere" href="liveshow.html">Liveshow</a>
+        <a class="w3-bar-item w3-btn w3-mobile" href="#contact">Contact us</a>
+        <a class="w3-bar-item w3-btn w3-mobile" href="aboutus.html">About us</a>
+    </div>
+    <div class="w3-row w3-khaki w3-mobile" style="padding-top: 3em;">
+        <div class="w3-col m12 l3 " style=" font-family: monospace; padding: 1em; ">
+
+
+
+
+            <p> In light of the current public health crisis, Justin Bieber announces his rescheduled 2021 World
+                Tour
+                dates below. The 45-date tour has been rerouted and the tour production has been redesigned and will
+                no
+                longer be stopping in stadiums or all markets. 19 new arena dates have been added. Kehlani and Jaden
+                Smith who were originally scheduled to support the tour will not be appearing on the new dates as
+                new
+                support will be added at a later date.</p>
+            <p>
+                Tickets for new shows* go on sale to the general public starting Thursday, August 6th at 10am local
+                time.</p>
+
+
+        </div>
+        <div class="w3-col m12 l9 container1">
+            <img src="img/liveshow/jb-tour.jpg" width="100%" alt="" class="image">
+            <div class="overlay">
+                <div class="content w3-row">
+                    <div class="w3-col s6 m6 l6">
+                        <div>
+                            <img src="img/liveshow/yummy-demo.jpg" alt="" width="90%">
+                        </div>
+
+
+                        <div>
+                            <audio controls style="width: 90%;">
+                                <source src="audio/liveshow/jb-yummy.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+
+
+                    </div>
+
+                    <div class="w3-col s6 m6 l6 " style="float: right;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m12 l12" style=" padding: 1em;">
+
+        </div>
+        <div class="w3-col l9 m12 container1">
+            <img src="img/liveshow/taylor_swift_tour.jpg" width="100%" alt="" class="image">
+            <div class="overlay">
+                <div class="content ">
+                    <div class="w3-col s6 m6 l6">
+                        <div>
+                            <img src="img/liveshow/lover.jpg" alt="" width="90%">
+                        </div>
+
+
+                        <div>
+                            <audio controls style="width: 90%;">
+                                <source src="audio/liveshow/tw-lover.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+
+
+                    </div>
+
+                    <div class="w3-col s6 m6 l6 " style="float: right;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col l3 m12" style="font-family: monospace; padding: 1em;">
+            <p> The U.S. and Brazil shows will be rescheduled to take place in 2021, with dates to be announced
+                later this year. Tickets held for each of those shows will transfer to a new show date without
+                action on the part of the ticket holders.
+            </p>
+            <p>
+                For those who desire refunds for tickets purchased for the U.S. Lover Fest shows, they will be
+                available starting May 1st subject to Ticketmaster terms. Watch for an email from Ticketmaster with
+                instructions on how to request one. For currently available information on all other performance
+                dates, please visit TaylorSwift.com Thank you so much for understanding. We look forward to seeing
+                you all, happy and healthy, in the future.
+            </p>
+        </div>
+        <div class="w3-col w3-center">
+            <a href="shop.html" class="w3-btn w3-black w3-margin-top w3-margin-bottom">
+                Listen to something !</a>
+        </div>
+    </div>
+
+
+    </div>
+
+    <!-- contact us -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+        <h2 class="w3-wide w3-center"><a href="#ontop"><span class="w3-bar-item w3-button"><b>Music world</b><span
+                        style="font-size: 0.5em;">Bring music to life.</span></a></h2>
+
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m4 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> Sai gon, Viet Nam<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: +00 123456<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: abc@mail.com<br>
+            </div>
+
+            <div class="w3-col m4">
+                <span class="w3-wide w3-center"><b>Contact us</b></span>
+                <br><br>
+                <form action="" onsubmit="event.preventDefault(); alert('Thanks for contact!')">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                        <div class="w3-row-padding">
+                            <input class="w3-input w3-border" type="text" placeholder="/Messenger"
+                                style="padding-bottom: 5em;" required name="messenger">
+                        </div>
+                        <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="w3-col m4" style="padding-left: 0.5em;">
+                <span><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319350036697!2d106.66408561455485!3d10.786834792314467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1svi!2s!4v1605777413170!5m2!1svi!2s"
+                        width="400" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe> </span>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="aboutus.html" target="_blank">Group 3</a></p>
+    </footer>
+</body>
+<script src="/js/main.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    localStorage.getItem('ticket') || ''
+    function ticket() {
+        window.location.href = 'shop.html'
+        localStorage.setItem('ticket', 'x')
+    }
+</script>
+
+</html>

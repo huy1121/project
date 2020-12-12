@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">''
+  
+  <style>
+    img {
+
+      min-height: auto;
+      min-width: auto;
+
+    }
+
+    .album {
+      padding: 1.5rem;
+      display: block;
+      margin: auto;
+    }
+
+    .cd {
+      padding: 1.5rem;
+      display: block;
+      margin: auto;
+    }
+
+    .dvd {
+      padding: 1.5rem;
+      display: block;
+      margin: auto;
+    }
+
+    .tk {
+      padding: 1.5rem;
+      display: block;
+      margin: auto;
+    }
+
+    .musicgenre {
+      padding: 1.5rem;
+      display: block;
+      margin: auto;
+    }
+
+
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: left;
+      color: black;
+      font-size: 2em;
+      text-indent: 95px;
+    }
+
+    .divImage {
+      text-align: center;
+      /* border: solid goldenrod medium; */
+      margin: 0.5rem 0rem;
+    }
+
+    .v-menu {
+      border: solid lightgray medium;
+      padding: 1rem;
+    }
+
+    #ontop {
+      padding-left: 8%;
+
+    }
+
+    #ontop>a {
+      margin-left: 8%;
+    }
+
+    a:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+
+    .imhere {
+      color: burlywood;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="home.html" class="w3-bar-item w3-button"><b>Music World</b> <span style="font-size: 0.6em;">Bring music to life.</span></a>
+      <!-- Float links to the right. Hide them on small screens -->
+
+      <div class="w3-right w3-hide-medium w3-hide-large" style="padding-right: 6em;">
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-black"><i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <span id="auth-small">
+              <a href="login.html" class="w3-bar-item w3-button">Login</a>
+              <a href="login.html" class="w3-bar-item w3-button">My account</a>
+            </span>
+
+
+          </div>
+        </div>
+
+      </div>
+      <div class="w3-right w3-hide-small">
+        <span id="auth">
+          <a href="login.html" class="w3-bar-item w3-button">Login</a>
+          <a href="login.html" class="w3-bar-item w3-button">My account</a>
+        </span>
+
+
+      </div>
+    </div>
+    <div class="w3-bar w3-black w3-hide-small " id="ontop">
+      <a class="w3-bar-item w3-btn w3-mobile" href="home.html">Home</a>
+      <a class="w3-bar-item w3-btn w3-mobile imhere" href="shop.html">Music</a>
+      <a class="w3-bar-item w3-btn w3-mobile " href="singer.html">Singer</a>
+      <a class="w3-bar-item w3-btn w3-mobile " href="liveshow.html">Liveshow</a>
+      <a class="w3-bar-item w3-btn w3-mobile" href="#contact">Contact us</a>
+      <a class="w3-bar-item w3-btn w3-mobile" href="aboutus.html">About us</a>
+    </div>
+
+  </div>
+  <!-- Body -->
+  <div class="w3-bar w3-black w3-hide-medium w3-hide-large" style="margin-top: 4.7em;">
+    <a class="w3-bar-item w3-btn w3-mobile" href="home.html">Home</a>
+    <a class="w3-bar-item w3-btn w3-mobile imhere" href="shop.html">Music</a>
+      <a class="w3-bar-item w3-btn w3-mobile " href="singer.html">Singer</a>
+      <a class="w3-bar-item w3-btn w3-mobile" href="liveshow.html">Liveshow</a>
+    <a class="w3-bar-item w3-btn w3-mobile" href="#contact">Contact us</a>
+    <a class="w3-bar-item w3-btn w3-mobile" href="aboutus.html">About us</a>
+  </div>
+
+ 
+  <div class="page-header">
+    <h1 style="padding-top: 5em;">Products </h1>
+    <div class="search-bar" style="margin-left: 5em ;">
+      <input class="w3-text-black w3-hover-border-khaki " id="tf-search" type="text" width="50px" placeholder="Name...">
+      <button class="w3-btn w3-teal" id="search-btn " onclick="search()">Search</button>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 v-menu">
+        <div class="v-menu 1" id="checkbox_cat">
+          <h3>Categories</h3>
+          <hr>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="album" id="music-album" class="mc-cat" name="cat">
+              Album
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="cd" id="music-cd" class="mc-cat" name="cat">
+              CD
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="dvd" id="music-dvd" class="mc-cat" name="cat">
+              DVD
+            </label>
+          </div>
+
+
+        </div>
+        <!-- Task -->
+        <div class="v-menu 2" style="padding-top: 1em;" id="checkbox_gerne">
+          <h3>Music genre</h3>
+          <hr>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="Pop" id="music-pop" class="categories" name="genre">
+              Pop
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="Rap" id="music-rap" class="categories" name="genre">
+              Rap
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="Jazz" id="music-jazz" class="categories" name="genre">
+              Jazz
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="row" id="products">
+
+          <div class="col-sm-6 col-md-4 divImage" data-id="abc">
+            <img src="img/product/ab-Believe.jpg" alt="" class="album">
+            <p>
+              name: ${v.name} <br>
+
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center"><a href="#ontop"><span class="w3-bar-item w3-button"><b>Music world</b><span
+        style="font-size: 0.5em;">Bring music to life.</span></a></h2>
+
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m4 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Sai gon, Viet Nam<br>
+          <i class="fa fa-phone" style="width:30px"></i> Phone: +00 123456<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: abc@mail.com<br>
+        </div>
+
+        <div class="w3-col m4">
+          <span class="w3-wide w3-center"><b>Contact us</b></span>
+          <br><br>
+          <form action="" onsubmit="event.preventDefault(); alert('Thanks for contact!')">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              </div>
+              <div class="w3-row-padding">
+                <input class="w3-input w3-border" type="text" placeholder="/Messenger" style="padding-bottom: 5em;"
+                  required name="messenger">
+              </div>
+              <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+            </div>
+
+
+          </form>
+        </div>
+        <div class="w3-col m4" style="padding-left: 0.5em;">
+          <span><iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319350036697!2d106.66408561455485!3d10.786834792314467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1svi!2s!4v1605777413170!5m2!1svi!2s"
+              width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe> </span>
+        </div>
+      </div>
+      <div>
+        <embed src="audio/liveshow/Justin Bieber - Come Around Me (Audio) (online-audio-converter.com).mp3"
+          autostart="true" hidden>
+      </div>
+
+      </embed>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">Powered by <a href="#" target="_blank">Group 3</a></p>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                </div>
+              </div>
+              <div class="col-md-6">
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script>
+  function search() {
+    var list = [];
+    let key = document.getElementById("tf-search").value
+    $.getJSON("js/music.json", function (items) {
+      list = items;
+      let re = new RegExp(key, "ig");
+      let subdata = list.filter(item => item.name.search(re) >= 0);
+      displayImages(subdata);
+      
+      $("#checkbox_gerne").html(`<h3>Music genre</h3>
+          <hr>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="Pop" id="music-pop" class="categories" name="genre" unchecked>
+              Pop
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="Rap" id="music-rap" class="categories" name="genre" unchecked>
+              Rap
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="Jazz" id="music-jazz" class="categories" name="genre" unchecked>
+              Jazz
+            </label>
+          </div>  `)
+      $("#checkbox_cat").html(`<h3>Categories</h3>
+          <hr>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="album" id="music-album" class="mc-cat" name="cat" unchecked>
+              Album
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="cd" id="music-cd" class="mc-cat" name="cat" unchecked>
+              CD
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="dvd" id="music-dvd" class="mc-cat" name="cat" unchecked>
+              DVD
+            </label>
+          </div>`)
+    });
+  } 
+  function searchByName(name) {
+    var list = [];
+    $.getJSON("js/music.json", function (items) {
+      list = items;
+      let re = name;
+      let subdata = list.filter(item => item.name.search(re) >= 0);
+      displayImages(subdata);
+    });
+  } 
+  $(document).ready(function () {
+    var data = [];
+    let song = localStorage.getItem("song")
+    
+    $.getJSON("js/music.json", function (items) {
+      // console.log(items);
+      data = items;
+
+      displayImages(data);
+
+    });
+    if(song != null){
+      console.log(song)
+      searchByName(song);
+      localStorage.removeItem("song")
+    }
+    $(document).on('click', ".divImage", function () {
+      let id = $(this).data('id')
+      let product = data.filter(ele => ele.id == id)
+
+      setModal(product[0])
+      $('#myModal').modal('show');
+    })
+
+    $("input[type=checkbox]").click(function () {
+      let subdata
+      let chk_cats = false
+      let chk_genres = false
+      var cats =
+        $('input:checkbox[name="cat"]:checked')
+          .map(function () {
+            return $(this).val();
+
+          }).get();
+
+      var genres =
+        $('input:checkbox[name="genre"]:checked')
+          .map(function () {
+            return $(this).val();
+          }).get();
+      cats = cats.toString().trim();
+      genres = genres.toString().trim();
+      if (cats.length == 0) {
+        chk_cats = false;
+        console.log("cats " + chk_cats)
+      } else {
+        chk_cats = true;
+        console.log("cats " + chk_cats)
+      }
+      if (genres.length == 0) {
+        chk_genres = false;
+        console.log("gen " + chk_genres)
+      } else {
+        chk_genres = true;
+        console.log("gen " + chk_genres)
+      }
+      if (chk_genres == true && chk_cats == true) {
+        subdata = data.filter(item => (cats.search(item.cat) >= 0 && genres.search(item.categories) >= 0));
+      }
+      else if (chk_genres == true && chk_cats == false) {
+        subdata = data.filter(item => (genres.search(item.categories) >= 0));
+      }
+      else if (chk_genres == false && chk_cats == true) {
+        subdata = data.filter(item => (cats.search(item.cat) >= 0));
+      }
+      else if (chk_genres == false && chk_cats == false){
+        subdata = data;
+      }
+
+
+      displayImages(subdata);
+
+    }
+    );
+
+  });
+
+  function displayImages(items) {
+    let s = ``;
+
+    $.each(items, function (k, v) {
+
+      s += `<div class="col-sm-6 col-md-4 divImage" data-id="${v.id}">
+                        <img src="img/product/${v.pic}" alt="" class="album">
+                        
+                             ${v.name} <br>
+                             ${v.categories} (${v.type}) 
+                             
+                         
+                     </div>
+             `;
+
+
+
+    });
+
+    $("#products").html(s);
+
+  }
+
+  function setModal(product) {
+    let x = `<div class="row">
+      <div class="col-md-6">
+        <div class="imgs-zoom-area"><img id="zoom_03" src="img/product/${product.pic}" style="width: 100%;" alt="">
+        </div>
+        ${product.audio}
+        
+      </div>
+      <div class="col-md-6">
+        <h3 class="text-black-1">${product.name}</h3>
+        <h4 class="brand-name-3">${product.singer}</h4>
+        <h6 class="brand-name-3">${product.categories} (${product.type.toUpperCase()})</h6>
+         <div role="tabpanel" class="tab-pane active" id="description">
+          <p>${product.description}</p>
+        
+        
+      </div>
+           
+                                   `;
+
+    $('.modal-body').html(x)
+  }
+</script>
+<script src="/js/main.js"></script>
+  
+</html>

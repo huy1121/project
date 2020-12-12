@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">''
+
+<style>
+  #ontop {
+    padding-left: 8%;
+
+  }
+
+  #ontop>a {
+    margin-left: 8%;
+  }
+
+  a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .imhere {
+    color: burlywood;
+  }
+</style>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="home.html" class="w3-bar-item w3-button"><b>Music World</b> <span style="font-size: 0.6em;">Bring music
+          to life.</span></a>
+    </div>
+    <div class="w3-bar w3-black w3-hide-small " id="ontop">
+      <a class="w3-bar-item w3-btn w3-mobile " href="home.html">Home</a>
+      <a class="w3-bar-item w3-btn w3-mobile " href="shop.html">Music</a>
+      <a class="w3-bar-item w3-btn w3-mobile " href="singer.html">Singer</a>
+      <a class="w3-bar-item w3-btn w3-mobile " href="liveshow.html">Liveshow</a>
+      <a class="w3-bar-item w3-btn w3-mobile" href="#contact">Contact us</a>
+      <a class="w3-bar-item w3-btn w3-mobile" href="aboutus.html">About us</a>
+    </div>
+
+  </div>
+  <!-- Body -->
+  <div class="w3-bar w3-black w3-hide-medium w3-hide-large" style="margin-top: 4.7em;"> 
+    <a
+      class="w3-bar-item w3-btn w3-mobile " href="home.html">Home</a>
+    <a class="w3-bar-item w3-btn w3-mobile " href="shop.html">Music</a>
+    <a class="w3-bar-item w3-btn w3-mobile " href="singer.html">Singer</a>
+    <a class="w3-bar-item w3-btn w3-mobile" href="liveshow.html">Liveshow</a>
+    <a class="w3-bar-item w3-btn w3-mobile" href="#contact">Contact us</a>
+    <a class="w3-bar-item w3-btn w3-mobile" href="aboutus.html">About us</a>
+  </div>
+
+
+
+  <div class="w3-container w3-twothird  w3-margin-top"
+    style="padding-top: 10rem; padding-left: 20%; padding-bottom: 5em;">
+
+    <form class="w3-container w3-card-4" action="#" onsubmit="postRegister(this)" method="POST">
+      <p>
+        <label>Firstname </label>
+        <input class="w3-input" type="text" name="firstname" style="width:90%" required>
+      </p>
+      <p>
+        <label>Lastname </label>
+        <input class="w3-input" type="text" name="lastname" style="width:90%" required>
+      </p>
+      <p>
+        <label>Email </label>
+        <input class="w3-input" type="email" name="email" style="width:90%" required>
+      </p>
+      <p>
+        <label>Phone number </label>
+        <input class="w3-input" type="text" pattern="[0-9]{1,10}" name="phone" style="width:90%" required>
+      </p>
+      <p>
+        <label>Username </label>
+        <input class="w3-input" type="text" name="username" style="width:90%" id="username" required>
+      </p>
+      <p>
+        <label>Password</label>
+        <input class="w3-input" type="password" name="password" id="password" style="width:90%" required>
+      </p>
+      <p>
+        <!-- <button class="w3-button w3-section w3-teal w3-ripple" type="submit" onsubmit="login(this)"> Log in
+                </button> -->
+        <button class="w3-button w3-section w3-teal w3-ripple" type="submit"> Sign up </button>
+        <button class="w3-button w3-section w3-red w3-ripple"><a href="home.html"> Cancel
+          </a></button>
+      </p>
+      <a href="login.html">
+        Do you have an account?</a>
+      <p></p>
+    </form>
+
+  </div>
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide w3-center"><a href="#ontop"><span class="w3-bar-item w3-button"><b>PoP</b><span
+            style="font-size: 0.5em;">Face the music</span></a></h2>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m4 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Sai gon, Viet Nam<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 123456<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: abc@mail.com<br>
+      </div>
+
+      <div class="w3-col m4">
+        <span class="w3-wide w3-center"><b>Contact us</b></span>
+        <br><br>
+        <form action="" onsubmit="event.preventDefault(); alert('Thanks for contact!')">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+            <div class="w3-row-padding">
+              <input class="w3-input w3-border" type="text" placeholder="/Messenger" style="padding-bottom: 5em;"
+                required name="messenger">
+            </div>
+            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          </div>
+
+
+        </form>
+      </div>
+      <div class="w3-col m4" style="padding-left: 0.5em;">
+        <span><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319350036697!2d106.66408561455485!3d10.786834792314467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1svi!2s!4v1605777413170!5m2!1svi!2s"
+            width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe> </span>
+      </div>
+    </div>
+    <div>
+
+    </div>
+
+    </embed>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge" id="contact">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="aboutus.html" target="_blank">Group 3</a></p>
+  </footer>
+
+</body>
+<script src="js/main.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+
+</html>
