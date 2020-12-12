@@ -1,5 +1,6 @@
 
 checkAuth()
+
 function postRegister(self) {
     event.preventDefault()
     let profile = JSON.parse(localStorage.getItem("profile") || "[]")
